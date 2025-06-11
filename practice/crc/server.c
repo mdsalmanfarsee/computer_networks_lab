@@ -22,20 +22,7 @@ int main()
     int size = sizeof(clientAddr);
     clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddr, &size);
 
-    /*while (1)
-    {
-        recv(clientSocket, buffer, sizeof(buffer), 0);
-        if (strcmp(buffer, "exit") == 0)
-            break;
-        printf("\nClient says %s: \n", buffer);
 
-        printf("Enter a message: ");
-        // scanf(" %[^\n]", buffer);
-        scanf("%s", buffer);
-        send(clientSocket, buffer, strlen(buffer) + 1, 0);
-        if (strcmp(buffer, "exit") == 0)
-            break;
-    }*/
 
     recv(clientSocket, buffer, sizeof(buffer), 0);
     printf("Recieved Codeword is : %s\n", buffer);
