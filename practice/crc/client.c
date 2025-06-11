@@ -18,21 +18,6 @@ int main()
 
     connect(clientSocket, (struct sockaddr *)&serverAddr, sizeof(serverAddr));
 
-    /*while (1)
-    {
-        printf("Enter a message: ");
-        // scanf(" %[^\n]", buffer); // Space before %[^\n] is important
-        scanf("%s", buffer); // Space before %[^\n] is important
-
-        send(clientSocket, buffer, strlen(buffer) + 1, 0);
-        if (strcmp(buffer, "exit") == 0)
-            break;
-
-        recv(clientSocket, buffer, sizeof(buffer), 0);
-        printf("Server says: %s\n", buffer);
-        if (strcmp(buffer, "exit") == 0)
-            break;
-    }*/
 
     printf("Enter dataword: ");
     scanf("%s", data);
